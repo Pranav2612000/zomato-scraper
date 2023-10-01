@@ -89,11 +89,13 @@ for zoneEntry in ZONES:
         const cuisine = card.getElementsByClassName('sc-fGSyRc eWQqcH')?.[0];
         const name = card.getElementsByClassName('flnmvC')?.[0];
         const offer = card.getElementsByClassName('sc-ijnzTp bbfjcv')?.[0];
+        const url = card.querySelector('a');
 
         return {
             name: name?.innerText,
             offer: offer?.innerText,
-            cuisine: cuisine?.innerText
+            cuisine: cuisine?.innerText,
+            url: url?.href
         }
     });
     return restaurantData;
